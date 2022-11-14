@@ -9,7 +9,11 @@ namespace Intro_To_Monogame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        Texture2D dinoTexture;
+        Texture2D CapAmericaTexture;
+        Texture2D IronManTexture;
+        Texture2D HulkTexture;
+        Texture2D SpiderManTexture;
+        Texture2D AirportTexture;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -23,7 +27,7 @@ namespace Intro_To_Monogame
             _graphics.PreferredBackBufferWidth = 800;
             _graphics.PreferredBackBufferHeight = 500;
             _graphics.ApplyChanges();
-            this.Window.Title = "Dino Time";
+            this.Window.Title = "Marvel Pic";
             base.Initialize();
         }
 
@@ -32,7 +36,11 @@ namespace Intro_To_Monogame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            dinoTexture = Content.Load<Texture2D>("dino");
+            CapAmericaTexture = Content.Load<Texture2D>("Captain America");
+            IronManTexture = Content.Load<Texture2D>("Iron Man");
+            HulkTexture = Content.Load<Texture2D>("Hulk");
+            SpiderManTexture = Content.Load<Texture2D>("spiderman");
+            AirportTexture = Content.Load<Texture2D>("Airport");
         }
 
         protected override void Update(GameTime gameTime)
@@ -52,7 +60,11 @@ namespace Intro_To_Monogame
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(dinoTexture,new Vector2(10, 10),Color.White);
+            _spriteBatch.Draw(IronManTexture,new Vector2(10, 10),Color.White);
+            _spriteBatch.Draw(CapAmericaTexture, new Vector2(10, 10), Color.White);
+            _spriteBatch.Draw(HulkTexture, new Vector2(10, 10), Color.White);
+            _spriteBatch.Draw(SpiderManTexture, new Vector2(10, 10), Color.White);
+            _spriteBatch.Draw(AirportTexture, new Vector2(10, 10), Color.White);
 
             _spriteBatch.End();
             base.Draw(gameTime);
