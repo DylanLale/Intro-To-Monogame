@@ -55,16 +55,17 @@ namespace Intro_To_Monogame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGoldenrodYellow);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(IronManTexture,new Vector2(10, 10),Color.White);
-            _spriteBatch.Draw(CapAmericaTexture, new Vector2(10, 10), Color.White);
-            _spriteBatch.Draw(HulkTexture, new Vector2(10, 10), Color.White);
-            _spriteBatch.Draw(SpiderManTexture, new Vector2(10, 10), Color.White);
-            _spriteBatch.Draw(AirportTexture, new Vector2(10, 10), Color.White);
+            _spriteBatch.Draw(AirportTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(IronManTexture,new Vector2(550, 50),Color.White);
+            _spriteBatch.Draw(CapAmericaTexture, new Vector2(100, 330), Color.White);
+            _spriteBatch.Draw(HulkTexture, new Vector2(200, 50), Color.White);
+            _spriteBatch.Draw(SpiderManTexture, new Vector2(550, 200), Color.White);
+            
 
             _spriteBatch.End();
             base.Draw(gameTime);
